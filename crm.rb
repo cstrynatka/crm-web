@@ -35,3 +35,14 @@ get '/contacts/new' do
 	erb :new_contact
 end
 
+# at the end of the file, add
+post '/contacts' do 
+	puts params
+end
+
+post '/contacts' do
+	new_contact = Contact.new(params[:first_name], params[:last_name], params[:email]),
+	$rolodex.add_contact(new_contact)
+	redirect to('/contacts')
+end
+
