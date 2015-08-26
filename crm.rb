@@ -30,3 +30,8 @@ get '/' do
 	erb :index
 end
 
+# as the last route, add
+get '/contacts/new' do 
+	erb :new_contact
+end
+
